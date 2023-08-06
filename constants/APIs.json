@@ -1,0 +1,111 @@
+{
+  "FundMe": [
+    {
+      "type": "constructor",
+      "payable": false,
+      "inputs": [{ "type": "address", "name": "priceFeed" }]
+    },
+    { "type": "error", "name": "FundMe__NotEnoughtETH", "inputs": [] },
+    { "type": "error", "name": "FundMe__NotOwner", "inputs": [] },
+    { "type": "error", "name": "FundMe__WithdrawFailed", "inputs": [] },
+    {
+      "type": "event",
+      "anonymous": false,
+      "name": "Funded",
+      "inputs": [
+        { "type": "address", "name": "funder", "indexed": true },
+        { "type": "uint256", "name": "amount", "indexed": true }
+      ]
+    },
+    { "type": "event", "anonymous": false, "name": "Withdrawed", "inputs": [] },
+    {
+      "type": "function",
+      "name": "MINIMUM_USD",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
+      "outputs": [{ "type": "uint256" }]
+    },
+    {
+      "type": "function",
+      "name": "fund",
+      "constant": false,
+      "stateMutability": "payable",
+      "payable": true,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "type": "function",
+      "name": "getAddressToAmountFunded",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [{ "type": "address", "name": "fundingAddress" }],
+      "outputs": [{ "type": "uint256" }]
+    },
+    {
+      "type": "function",
+      "name": "getBalance",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
+      "outputs": [{ "type": "uint256" }]
+    },
+    {
+      "type": "function",
+      "name": "getFunder",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [{ "type": "uint256", "name": "index" }],
+      "outputs": [{ "type": "address" }]
+    },
+    {
+      "type": "function",
+      "name": "getFunders",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
+      "outputs": [{ "type": "address[]" }]
+    },
+    {
+      "type": "function",
+      "name": "getOwner",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
+      "outputs": [{ "type": "address" }]
+    },
+    {
+      "type": "function",
+      "name": "getPriceFeed",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
+      "outputs": [{ "type": "address" }]
+    },
+    {
+      "type": "function",
+      "name": "getVersion",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
+      "outputs": [{ "type": "uint256" }]
+    },
+    {
+      "type": "function",
+      "name": "withdraw",
+      "constant": false,
+      "payable": false,
+      "inputs": [],
+      "outputs": []
+    }
+  ]
+}
